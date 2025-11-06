@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="/static/mystyles.css">
+    <title>Blog Site</title>
+</head>
+
+<body>
+    <h1>This is my blog site</h1>
+
+
+    {% for post in posts%}
+
+
+   
+        <div class="post">
+            <a href="/posts/{{ post.id }}">
+            <h2>{{ post.title }}</h2>
+            <p>{{post.content}}</p>
+            <p class="time">{{post.created_at}}</p>
+            </a>
+        </div>
+ 
+    {% endfor%}
+        
+
+
+
+</body>
+
+
+
+
+

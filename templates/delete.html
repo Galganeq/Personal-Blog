@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="/static/mystyles.css">
+    <title>Post {{post.title}}</title>
+</head>
+
+<body>
+    <div class="postd">
+        <h1>{{ post.title }}</h1>
+
+        <h2>{{ post.content }}</h2>
+
+    </div>
+
+    <form action="/delete/{{ post.id }}" method="post">
+        <button  name="deletebutton" class="deletebutton">Delete</button>
+    </form>
+</body>
+
+</html>

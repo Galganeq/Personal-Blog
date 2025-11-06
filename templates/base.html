@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="/static/mystyles.css">
+    <title>Blog Site</title>
+</head>
+
+<body>
+    <h1>This is my blog site</h1>
+
+
+    {% for post in posts%}
+
+
+
+        <div class="post">
+            <a href="/edit/{{ post.id }}" target="_self"><button class="button1">Edit</button></a>
+            <a href="/delete/{{ post.id }}" target="_self"><button value="delete" class="button2">Delete</button></a>
+            <h2>{{ post.title }}</h2>
+            <p>{{post.content}}</p>
+            <p class="time">{{post.created_at}}</p>
+        </div>
+ 
+    {% endfor%}
+        
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
